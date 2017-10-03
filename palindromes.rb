@@ -6,20 +6,20 @@ Find the largest palindrome made from the product of two 3-digit numbers."
 
 def palipali(number_of_digits)
   number = ""
-  number_of_digits.times do |i|
-    number = number += "9"
+
+  number_of_digits.times do
+    number += "9"
   end
 
-  number = number.to_i
-  max_number = number**2
+  max_number = number.to_i ** 2
+
   for i in (1...max_number).reverse_each
-    string =  i.to_s
-    reversed_string = string.reverse()
-    if string == reversed_string
+    if i.to_s == i.to_s.reverse()
       puts i
       return i
     end
   end
+
 end
 
 
